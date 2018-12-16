@@ -8,8 +8,8 @@
     "build": "webpack --config webpack.prod.config.js",
     "prettify": "prettier \"**/*.+(js|json|less|css|ts|tsx|md)\" --write",
     "format": "npm run prettify -- --write",
-    "lint": "eslint src",
-    "validate": "npm run lint && npm run prettier -- --list-different",
+    "lint": "eslint \"src/**/*.+(ts|tsx)\"",
+    "validate": "npm run lint && npm run prettify -- --list-different",
     "precommit": "npm run validate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
